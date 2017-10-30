@@ -1,0 +1,19 @@
+
+<div id="team">
+  <ul class="list-inline text-center">
+     <% ["numanosk", "Dahju"].each do |gh_username| %>
+    <li>
+      <% link_to "https://kitt.lewagon.com/alumni/#{gh_username}", target: "_blank" do %>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
+      <% end %>
+      <h3><%= gh_username.capitalize %></h3>
+       <p>
+         <% link_to "https://github.com/#{gh_username}", target: "_blank" do %>
+         <i class="fa fa-github"></i>
+         <%= gh_username.capitalize %>
+         <% end %>
+       </p>
+    </li>
+  <% end %>
+  </ul>
+</div>
